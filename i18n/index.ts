@@ -3,7 +3,7 @@ import BackendFs from "i18next-fs-backend";
 
 i18n.use(BackendFs).init({
   // lng: "ar",
-  fallbackLng: "ar",
+  fallbackLng: "en",
   supportedLngs: ["ar", "en"],
   fallbackNS: "common",
   ns: ["common"],
