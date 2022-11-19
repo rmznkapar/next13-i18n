@@ -15,5 +15,5 @@ export default function RootLayout({ children, params }) {
 }
 
 export function generateStaticParams() {
-  return [{lang: 'tr', lang: 'en', lang: ''}];
+  return [{lang: 'tr', lang: 'en', lang: './'}];
 }
