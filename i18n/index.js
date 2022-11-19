@@ -1,4 +1,3 @@
-import { NextResponse } from 'next/server';
 import enJson from './locale/en.json';
 import trJson from './locale/tr.json';
 
@@ -8,8 +7,6 @@ const langMap = {
 }
 
 const i18n = (langKey) => {
-  console.log(NextResponse.cookies())
-
   return langMap['tr'][langKey] ?? '';
 }
 
