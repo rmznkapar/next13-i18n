@@ -14,6 +14,6 @@ export default function RootLayout({ children, params }) {
   );
 }
 
-// export function generateStaticParams() {
-//   return (i18n.options.supportedLngs as string[]).map((locale) => ({ locale }));
-// }
+export function generateStaticParams() {
+  return [{lang: 'tr', lang: 'en'}];
+}
