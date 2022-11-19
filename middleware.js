@@ -1,20 +1,20 @@
 import { NextResponse } from "next/server";
 
 export function middleware(request) {
-  const locales = ['en', 'tr'];
-  const defaultLang = 'tr';
-  const { headers, nextUrl } = request;
+  // const locales = ['en', 'tr'];
+  // const defaultLang = 'tr';
+  // const { headers, nextUrl } = request;
 
-  const shouldCheckLocale = !nextUrl.pathname.startsWith("/_next") && !nextUrl.pathname.startsWith("/favicon");
+  // const shouldCheckLocale = !nextUrl.pathname.startsWith("/_next") && !nextUrl.pathname.startsWith("/favicon");
 
-  const reqLocale = nextUrl.pathname.split("/")[1];
-  const noValidLocale = !locales.includes(reqLocale);
+  // const reqLocale = nextUrl.pathname.split("/")[1];
+  // const noValidLocale = !locales.includes(reqLocale);
   
-  console.log(nextUrl.pathname)
-  if (shouldCheckLocale && noValidLocale) {
-    console.log('nolocale: '+nextUrl.pathname)
-    return NextResponse.rewrite(new URL(`/${defaultLang}${nextUrl.pathname}`, request.url));
-  }
+  // console.log(nextUrl.pathname)
+  // if (shouldCheckLocale && noValidLocale) {
+  //   console.log('nolocale: '+nextUrl.pathname)
+  //   return NextResponse.rewrite(new URL(`/${defaultLang}${nextUrl.pathname}`, request.url));
+  // }
 
   return NextResponse.next();
 
